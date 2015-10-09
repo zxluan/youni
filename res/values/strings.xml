@@ -2,12 +2,12 @@
 
     <string name="app_name">youni</string>
     <string name="search_something">Search somthing</string>
-    <string name="search">Search</string>
-    <string name="main">Main</string>
-     <string name="publish">Publish</string>
-      <string name="donation">Donation</string>
-       <string name="me">Me</string>
-       <string name="check">Check</string>
+    <string name="search">搜索</string>
+    <string name="main">首页</string>
+     <string name="publish">发布</string>
+      <string name="donation">捐资</string>
+       <string name="me">我的</string>
+       <string name="check">确认</string>
        <string name="ID">ID</string>
        <string name="detailed">Detailed</string>
        <string name="button">button</string>
@@ -34,6 +34,14 @@
      <string name="delet">取消</string>
      <string name="check2">确定</string>
      <string name="word">留言 :</string>
-     <string name="donation2">我要捐</string>
+     <string name="zhanghu">账户</string>
+      <string name="mima">请输入密码</string>
+       <string name="zhanghuming">账户名</string>
+        <string name="password">密码</string>
+        <string name="find">找回密码</string>
+         <string name="donation2">我要捐</string>
+          <string name="fast">快速注册</string>
+         
+        
 
 </resources>

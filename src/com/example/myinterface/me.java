@@ -1,10 +1,13 @@
 package com.example.myinterface;
 
+//import com.example.youni.Firstpanel;
 import com.example.youni.R;
 
 import android.os.Bundle;
 import android.app.Activity;
-//import android.content.Intent;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
 //import android.view.Menu;
 //import android.view.View;
 //import android.view.View.OnClickListener;
@@ -16,15 +19,14 @@ public class me extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.me);
-		//button =(Button)findViewById(R.id.button1);
-		//button.setOnClickListener(new OnClickListener(){
-			//@Override
-			//public void onClick(View v){
-			//	Intent intent=new Intent();
-			//.setClass(me.this,SecondActivity.class);
-			//	startActivity(intent);
-			//}
-		//});
+		button =(Button)findViewById(R.id.button1);
+		button.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v){
+				Intent intent=new Intent(me.this,com.example.myinterface.LoginActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	//@Override

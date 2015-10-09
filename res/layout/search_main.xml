@@ -31,7 +31,7 @@
         android:layout_alignBottom="@+id/editText1"
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/editText1"
-        android:text="@string/button" />
+        android:text="@string/search" />
 
     <ExpandableListView
         android:id="@+id/expandableListView1"
