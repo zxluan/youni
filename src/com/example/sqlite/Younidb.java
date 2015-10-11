@@ -35,6 +35,7 @@ public class Younidb {
 			values.put("like", search_out.getLike());
 			values.put("history", search_out.getHistory());
 			values.put("time", search_out.getTime());
+			db.insert("search_out", null, values);
 		}
 	}
 	//从数据库读取捐赠的详细信息等
@@ -65,6 +66,7 @@ public class Younidb {
 			values.put("like", search_need.getLike());
 			values.put("history", search_need.getHistory());
 			values.put("time", search_need.getTime());
+			db.insert("search_need", null, values);
 		}
 	}
 	//从数据库读取捐赠的详细信息等
@@ -81,6 +83,26 @@ public class Younidb {
 				search_need.setHistory(cursor.getString(cursor.getColumnIndex("history")));
 				search_need.setTime(cursor.getString(cursor.getColumnIndex("time")));
 				list.add(search_need);
+			}while(cursor.moveToNext());
+		}
+		
+		return list;
+		
+	}
+	public List<Search_out> loadSearch_out(String h,String s){
+		List<Search_out> list =new ArrayList<Search_out>();
+		String sra="SELECT  * FROM "+"search_out" +" where "+h+" like '%"+s+"%'";
+		Cursor cursor=db.rawQuery(sra, null);
+		if(cursor.moveToFirst()){
+			do{
+				Search_out search_out=new Search_out();
+				search_out.setId(cursor.getInt(cursor.getColumnIndex("id")));
+				search_out.setName(cursor.getString(cursor.getColumnIndex("name")));
+				search_out.setDetailed(cursor.getString(cursor.getColumnIndex("detailed")));
+				search_out.setLike(cursor.getString(cursor.getColumnIndex("like")));
+				search_out.setHistory(cursor.getString(cursor.getColumnIndex("history")));
+				search_out.setTime(cursor.getString(cursor.getColumnIndex("time")));
+				list.add(search_out);
 			}while(cursor.moveToNext());
 		}
 		

@@ -44,9 +44,9 @@ public final class R {
         public static final int editText3=0x7f07000f;
         public static final int editText4=0x7f07000d;
         public static final int et_search=0x7f070022;
-        public static final int expandableListView1=0x7f070024;
+        public static final int expandableListView1=0x7f070025;
         public static final int expandableListView2=0x7f070023;
-        public static final int expandableListView3=0x7f070025;
+        public static final int expandableListView3=0x7f070026;
         public static final int id=0x7f070005;
         public static final int imageButton1=0x7f070001;
         public static final int imageButton2=0x7f070002;
@@ -54,7 +54,7 @@ public final class R {
         public static final int imageView1=0x7f070015;
         public static final int imageView2=0x7f070019;
         public static final int input_message=0x7f070007;
-        public static final int listView1=0x7f070026;
+        public static final int listView1=0x7f070027;
         public static final int lv_server=0x7f070021;
         public static final int main=0x7f070009;
         public static final int me=0x7f07000c;
@@ -62,6 +62,7 @@ public final class R {
         public static final int publish=0x7f07000a;
         public static final int radioButton1=0x7f07001f;
         public static final int radioButton2=0x7f07001e;
+        public static final int searc=0x7f070024;
         public static final int search=0x7f070008;
         public static final int show=0x7f070004;
         public static final int textView1=0x7f070010;

@@ -5,6 +5,13 @@ import java.util.List;
 //import com.example.myinterface.me;
 
 
+
+
+import model.Search_out;
+
+import com.example.sqlite.Younidb;
+
+
 //import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +25,9 @@ import android.widget.ListView;
 
 
 public class Firstpanel extends Activity{
+	private Younidb younidb;
+	private List<String>dataList=new ArrayList<String>();
+	private List<Search_out> searchoutList;
 	private List<firstinside> firstinsideList=new ArrayList<firstinside>();
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -26,6 +36,8 @@ public class Firstpanel extends Activity{
 		first_inside_Adapter adapter=new first_inside_Adapter(Firstpanel.this,R.layout.first_inside,firstinsideList);
 		ListView listView =(ListView)findViewById(R.id.detailed_view);
 		listView.setAdapter(adapter);
+		
+		
 		listView.setOnItemClickListener(new OnItemClickListener(){
 
 			@Override
@@ -83,23 +95,18 @@ public class Firstpanel extends Activity{
 		});
 	}
 	private void initfirstinsides() {
+		younidb=Younidb.getInstance(this);
+		searchoutList=younidb.loadSearch_out();
 		// TODO Auto-generated method stub
-		firstinside fi1=new firstinside("luan1",R.drawable.showpic,"详细信息1");
-		firstinsideList.add(fi1);
-		firstinside fi2=new firstinside("luan2",R.drawable.showpic,"详细信息2");
-		firstinsideList.add(fi2);
-		firstinside fi3=new firstinside("luan3",R.drawable.showpic,"详细信息3");
-		firstinsideList.add(fi3);
-		firstinside fi4=new firstinside("luan4",R.drawable.showpic,"详细信息4");
-		firstinsideList.add(fi4);
-		firstinside fi5=new firstinside("luan5",R.drawable.showpic,"详细信息5");
-		firstinsideList.add(fi5);
-		firstinside fi6=new firstinside("luan6",R.drawable.showpic,"详细信息6");
-		firstinsideList.add(fi6);
-		firstinside fi7=new firstinside("luan7",R.drawable.showpic,"详细信息7");
-		firstinsideList.add(fi7);
-		firstinside fi8=new firstinside("luan8",R.drawable.showpic,"详细信息8");
-		firstinsideList.add(fi8);
+		if(searchoutList.size()>0){
+			dataList.clear();
+			for(Search_out search_out:searchoutList){
+				dataList.add(search_out.getName());
+				firstinside fi1=new firstinside(search_out.getName(),R.drawable.showpic,search_out.getDetailed());
+				firstinsideList.add(fi1);
+				
+			}
+		}
 	}
 	
 

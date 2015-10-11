@@ -1,6 +1,7 @@
 package com.example.myinterface;
 
 //import com.example.youni.Firstpanel;
+//import com.example.sqlite.Younidb;
 import com.example.youni.R;
 
 import android.os.Bundle;
@@ -15,10 +16,12 @@ import android.widget.Button;
 
 public class me extends Activity {
     Button button =null;
+//    private Younidb younidb;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.me);
+//		younidb=Younidb.getInstance(this);
 		button =(Button)findViewById(R.id.button1);
 		button.setOnClickListener(new OnClickListener(){
 			@Override

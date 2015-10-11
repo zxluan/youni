@@ -24,7 +24,7 @@
         android:inputType="text" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/searc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editText1"
@@ -54,7 +54,7 @@
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/button1" >
+        android:layout_below="@+id/searc" >
     </ExpandableListView>
 
     <ListView
