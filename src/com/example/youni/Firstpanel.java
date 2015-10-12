@@ -26,9 +26,12 @@ import android.widget.ListView;
 
 public class Firstpanel extends Activity{
 	private Younidb younidb;
+	public  final static String SER_KEY = "com.tutor.objecttran.ser"; 
 	private List<String>dataList=new ArrayList<String>();
 	private List<Search_out> searchoutList;
 	private List<firstinside> firstinsideList=new ArrayList<firstinside>();
+	private firstinside info;
+	private String to;
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.first_layout);
@@ -44,7 +47,16 @@ public class Firstpanel extends Activity{
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
 				// TODO Auto-generated method stub
+				info= firstinsideList.get(position);
+				to=info.getDetailed();
+//				younidb.loadSearch_out(detailed, to);
+				Search_out search_out1 = new Search_out();  
+				search_out1.setDetailed(to); 
 				Intent intent=new Intent (Firstpanel.this,detailed_information.class);
+//		        Intent mIntent = new Intent(this,ObjectTranDemo1.class);  
+		        Bundle mBundle = new Bundle();  
+		        mBundle.putSerializable(SER_KEY,search_out1);  
+		        intent.putExtras(mBundle);  
 				startActivity(intent);
 				
 			}
@@ -108,6 +120,7 @@ public class Firstpanel extends Activity{
 			}
 		}
 	}
+	
 	
 
 }

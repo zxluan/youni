@@ -1,6 +1,9 @@
 package model;
 
-public class Search_out {
+import java.io.Serializable;
+
+public class Search_out implements Serializable{
+	private static final long serialVersionUID = -7060210544600464481L;   
 	private int id;
 	private String name;
 	private String detailed;
