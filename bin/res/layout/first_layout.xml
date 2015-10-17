@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bj"
+    android:columnCount="1"
+    android:orientation="horizontal"
+    android:rowCount="5" >
+
+    <LinearLayout
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.52"
+            android:hint="@string/search_something" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search" />
+	</LinearLayout>
+
+    <ListView
+        android:id="@+id/detailed_view"
+        android:layout_width="match_parent"
+        android:layout_height="364dp" >
+
+    </ListView>
+ 
+    <LinearLayout
+        android:layout_width="316dp"
+        android:layout_height="88dp"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="4"
+        android:background="@drawable/title_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/main"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main" />
+
+        <Button
+            android:id="@+id/publish"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/publish" />
+
+        <Button
+            android:id="@+id/donation"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/donation" />
+
+        <Button
+            android:id="@+id/me"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.13"
+            android:text="@string/me" />
+    </LinearLayout>
+
+</GridLayout>
