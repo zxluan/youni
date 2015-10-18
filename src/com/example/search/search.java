@@ -1,6 +1,6 @@
 package com.example.search;
 
-import com.example.youni.R;
+import com.example.zz.R;
 
 import android.app.Activity;
 import android.os.Bundle;
