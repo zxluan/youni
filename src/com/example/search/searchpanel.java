@@ -9,6 +9,8 @@ import model.Search_out;
 
 
 
+
+
 import com.example.myinterface.firstinside;
 import com.example.sqlite.Younidb;
 //import com.example.sqlite.Younidb;
@@ -20,6 +22,8 @@ import com.example.zz.first_inside_Adapter;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 //import android.content.Intent;
 //import android.database.Cursor;
 //import android.database.sqlite.SQLiteDatabase;
@@ -97,12 +101,14 @@ public class searchpanel extends Activity {
 			dataList.clear();
 			for(Search_out search_out:searchoutList){
 				dataList.add(search_out.getName());
-				firstinside fi1=new firstinside(search_out.getName(),R.drawable.showpic,search_out.getDetailed());
+				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
+				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed());
 				firstinsideList.add(fi1);
 				
 			}
 		}else{
-			firstinside fi1=new firstinside("无",R.drawable.showpic,"无内容");
+			Bitmap bb=null;
+			firstinside fi1=new firstinside("无",bb,"无内容");
 			firstinsideList.add(fi1);
 		}
 	}

@@ -74,32 +74,12 @@
         android1:layout_toRightOf="@+id/editText4"
         android1:src="@android:drawable/ic_menu_camera" />
 
-    <TextView
-        android1:id="@+id/tv_user"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:layout_alignLeft="@+id/button1"
-        android1:layout_below="@+id/imageButton1"
-        android1:layout_marginTop="16dp"
-        android1:text="@string/address1"
-        android1:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android1:id="@+id/editText3"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:layout_below="@+id/tv_user"
-        android1:layout_toRightOf="@+id/editText4"
-        android1:ems="10"
-        android1:hint="@string/input_address"
-        android1:inputType="textPostalAddress" />
-
     <EditText
         android1:id="@+id/editText2"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
-        android1:layout_above="@+id/imageButton3"
         android1:layout_alignLeft="@+id/editText1"
+        android1:layout_below="@+id/myRadioGroup"
         android1:ems="10"
         android1:hint="@string/say_something"
         android1:inputType="textMultiLine" />
@@ -120,5 +100,35 @@
         android1:layout_marginTop="26dp"
         android1:layout_toRightOf="@+id/editText4"
         android1:text="@string/check1" />
+
+    <ImageView
+        android1:id="@+id/takephoto"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_above="@+id/imageButton1"
+        android1:layout_alignRight="@+id/editText2"
+        android1:layout_below="@+id/editText2"
+        android1:layout_toRightOf="@+id/editText4"
+        android1:src="@drawable/icon3" />
+
+    <EditText
+        android1:id="@+id/editText3"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_below="@+id/tv_user"
+        android1:layout_marginTop="16dp"
+        android1:layout_toRightOf="@+id/editText4"
+        android1:ems="10"
+        android1:hint="@string/input_address"
+        android1:inputType="textPostalAddress" />
+
+    <TextView
+        android1:id="@+id/tv_user"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignRight="@+id/button1"
+        android1:layout_below="@+id/imageButton1"
+        android1:text="@string/address1"
+        android1:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

@@ -13,27 +13,19 @@
         android:layout_gravity="top"
         android:orientation="horizontal" >
 
-        <EditText
-            android:id="@+id/input_message"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.52"
-            android:hint="@string/search_something" />
-
         <Button
             android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/search" />
 	</LinearLayout>
-
-    <ListView
+	<ListView
         android:id="@+id/detailed_view"
         android:layout_width="match_parent"
-        android:layout_height="364dp" >
+        android:layout_height="match_parent" >
 
     </ListView>
- 
+    
     
 
 </GridLayout>

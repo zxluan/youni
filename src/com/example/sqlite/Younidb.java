@@ -3,6 +3,8 @@ package com.example.sqlite;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.myinterface.HomeFragment;
+
 import model.Search_need;
 import model.Search_out;
 import android.content.ContentValues;
@@ -12,8 +14,9 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class Younidb {
 	public static final String DB_NAME="youni";//数据库名字
-	private static final int VERSION=1;//数据库版本
+	private static final int VERSION=2;//数据库版本
 	private static  Younidb younidb;
+	public String picture = "pic";
 	private SQLiteDatabase db;
 	//将构造方法私有化
 	private Younidb(Context context){
@@ -35,6 +38,8 @@ public class Younidb {
 			values.put("like", search_out.getLike());
 			values.put("history", search_out.getHistory());
 			values.put("time", search_out.getTime());
+			values.put("pic", search_out.getPic());
+			values.put("address",search_out.getAddress());
 			db.insert("search_out", null, values);
 		}
 	}
@@ -51,6 +56,8 @@ public class Younidb {
 				search_out.setLike(cursor.getString(cursor.getColumnIndex("like")));
 				search_out.setHistory(cursor.getString(cursor.getColumnIndex("history")));
 				search_out.setTime(cursor.getString(cursor.getColumnIndex("time")));
+				search_out.setPic(cursor.getBlob(cursor.getColumnIndex("pic")));
+				search_out.setAddress(cursor.getString(cursor.getColumnIndex("address")));
 				list.add(search_out);
 			}while(cursor.moveToNext());
 		}
@@ -66,6 +73,8 @@ public class Younidb {
 			values.put("like", search_need.getLike());
 			values.put("history", search_need.getHistory());
 			values.put("time", search_need.getTime());
+			values.put("pic", search_need.getPic());
+			values.put("address",search_need.getAddress());
 			db.insert("search_need", null, values);
 		}
 	}
@@ -82,6 +91,8 @@ public class Younidb {
 				search_need.setLike(cursor.getString(cursor.getColumnIndex("like")));
 				search_need.setHistory(cursor.getString(cursor.getColumnIndex("history")));
 				search_need.setTime(cursor.getString(cursor.getColumnIndex("time")));
+				search_need.setPic(cursor.getBlob(cursor.getColumnIndex("pic")));
+				search_need.setAddress(cursor.getString(cursor.getColumnIndex("address")));
 				list.add(search_need);
 			}while(cursor.moveToNext());
 		}
@@ -102,6 +113,8 @@ public class Younidb {
 				search_out.setLike(cursor.getString(cursor.getColumnIndex("like")));
 				search_out.setHistory(cursor.getString(cursor.getColumnIndex("history")));
 				search_out.setTime(cursor.getString(cursor.getColumnIndex("time")));
+				search_out.setPic(cursor.getBlob(cursor.getColumnIndex("pic")));
+				search_out.setAddress(cursor.getString(cursor.getColumnIndex("address")));
 				list.add(search_out);
 			}while(cursor.moveToNext());
 		}

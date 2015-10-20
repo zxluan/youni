@@ -13,6 +13,8 @@ public class search_DatabaseHelper extends SQLiteOpenHelper{
            + "detailed text,"
 		   + "like text,"
            + "history text,"
+           + "pic blob,"
+		   + "address text,"
 		   + "time text)";//Search_out±í
 	public static final String CREATE_SEARCH_NEED="Create table search_need("
 	           + "id integer primary key autoincrement ,"
@@ -20,6 +22,8 @@ public class search_DatabaseHelper extends SQLiteOpenHelper{
 	           + "detailed text,"
 			   + "like text,"
 	           + "history text,"
+	           + "pic blob,"
+			   + "address text,"
 			   + "time text)";//Search_need±í
 	public search_DatabaseHelper(Context context, String name,
 			CursorFactory factory, int version) {
@@ -35,7 +39,9 @@ public class search_DatabaseHelper extends SQLiteOpenHelper{
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		
+		db.execSQL("drop table if exists search_out");
+		db.execSQL("drop table if exists search_need");
+		onCreate(db);
 	}
 	
 }
