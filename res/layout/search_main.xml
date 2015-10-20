@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/bj"
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -20,6 +23,10 @@
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+        android:layout_alignRight="@+id/expandableListView2"
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
         android:ems="10"
         android:inputType="text" />
 
@@ -33,14 +40,45 @@
         android:layout_toRightOf="@+id/editText1"
         android:text="@string/search" />
 
+<<<<<<< HEAD
     
 
+=======
+    <ExpandableListView
+        android:id="@+id/expandableListView1"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1" >
+    </ExpandableListView>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView2"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@+id/expandableListView1"
+        android:layout_centerHorizontal="true" >
+    </ExpandableListView>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView3"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/searc" >
+    </ExpandableListView>
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_below="@+id/editText1" >
+=======
+        android:layout_alignLeft="@+id/expandableListView1"
+        android:layout_below="@+id/expandableListView1" >
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     </ListView>
 
 </RelativeLayout>

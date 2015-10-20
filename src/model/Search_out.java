@@ -10,6 +10,7 @@ public class Search_out implements Serializable{
 	private String like;
 	private String history;
 	private String time;
+<<<<<<< HEAD
 	private String address;
 	private byte[] pic;
 	public String getAddress() {
@@ -18,6 +19,9 @@ public class Search_out implements Serializable{
 	public void setAddress(String address) {
 		this.address = address;
 	}
+=======
+	private byte[] pic;
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 	public byte[] getPic() {
 		return pic;
 	}

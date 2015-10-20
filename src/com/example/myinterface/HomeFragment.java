@@ -1,5 +1,6 @@
 package com.example.myinterface;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -187,3 +188,23 @@ public boolean onOptionsItemSelected(MenuItem item){
 	
 
 
+=======
+import com.example.tab.R;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+
+
+public class HomeFragment extends Fragment{
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
+            Bundle savedInstanceState) {  
+        View view = inflater.inflate(R.layout.home, container, false);  
+        return view;  
+    }  
+
+}
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456

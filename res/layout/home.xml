@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/bj"
+=======
+     android:id="@+id/id_home"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:columnCount="1"
     android:orientation="horizontal"
     android:rowCount="5" >
@@ -13,12 +20,23 @@
         android:layout_gravity="top"
         android:orientation="horizontal" >
 
+<<<<<<< HEAD
+=======
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.52"
+            android:hint="@string/search_something" />
+
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
         <Button
             android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/search" />
 	</LinearLayout>
+<<<<<<< HEAD
 	<ListView
         android:id="@+id/detailed_view"
         android:layout_width="match_parent"
@@ -27,5 +45,16 @@
     </ListView>
     
     
+=======
+
+    <ListView
+        android:id="@+id/detailed_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="left|fill_vertical"
+        android:layout_row="1" >
+    </ListView>
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 
 </GridLayout>

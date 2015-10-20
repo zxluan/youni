@@ -1,4 +1,5 @@
 package com.example.search;
+<<<<<<< HEAD
 //import com.example.phone1.R;
 //import com.example.phone1.search;
 
@@ -20,14 +21,28 @@ import com.example.sqlite.Younidb;
 import com.example.zz.R;
 import com.example.zz.first_inside_Adapter;
 
+=======
+
+import java.util.ArrayList;
+import java.util.List;
+import model.Search_out;
+import com.example.sqlite.Younidb;
+import com.example.youni.R;
+import com.example.youni.first_inside_Adapter;
+import com.example.youni.firstinside;
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+<<<<<<< HEAD
 //import android.content.Intent;
 //import android.database.Cursor;
 //import android.database.sqlite.SQLiteDatabase;
 //import android.view.Menu;
+=======
+//import android.util.Base64;
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -36,7 +51,12 @@ import android.widget.ListView;
 
 public class searchpanel extends Activity {
     private Younidb younidb;
+<<<<<<< HEAD
 //    private search_DatabaseHelper dbHelper;
+=======
+//    private String base64;
+//	private byte[] bytes;
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     private List<Search_out> searchoutList;
     private List<firstinside> firstinsideList=new ArrayList<firstinside>();
 	private List<String>dataList=new ArrayList<String>();
@@ -45,11 +65,14 @@ public class searchpanel extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search);
+<<<<<<< HEAD
 //		younidb=Younidb.getInstance(this);
 //		initfirstinsides();
 //		first_inside_Adapter adapter=new first_inside_Adapter(searchpanel.this,R.layout.first_inside,firstinsideList);
 //		ListView listView =(ListView)findViewById(R.id.listView1);
 //		listView.setAdapter(adapter);
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 		Button search=(Button)findViewById(R.id.button1);
 		search.setOnClickListener(new OnClickListener(){
 	    	public  void onClick(View v){
@@ -57,6 +80,7 @@ public class searchpanel extends Activity {
 				first_inside_Adapter adapter=new first_inside_Adapter(searchpanel.this,R.layout.first_inside,firstinsideList);
 	    		ListView listView =(ListView)findViewById(R.id.lv_server);
 	    		listView.setAdapter(adapter);
+<<<<<<< HEAD
 //	    		Intent intent = new Intent(searchpanel.this,search.class);
 //	    		startActivity(intent);
 //	    		EditText editText=(EditText)findViewById(R.id.editText1);
@@ -90,6 +114,10 @@ public class searchpanel extends Activity {
 	    	
 	    });
 
+=======
+			}
+	    });
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 	}
 	private void  initfirstinsides (){
 		EditText editText=(EditText)findViewById(R.id.et_search);
@@ -98,6 +126,7 @@ public class searchpanel extends Activity {
 		searchoutList=younidb.loadSearch_out(tab_field02,search);
 		// TODO Auto-generated method stub
 		if(searchoutList.size()>0){
+<<<<<<< HEAD
 			dataList.clear();
 			for(Search_out search_out:searchoutList){
 				dataList.add(search_out.getName());
@@ -105,6 +134,17 @@ public class searchpanel extends Activity {
 				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed());
 				firstinsideList.add(fi1);
 				
+=======
+			firstinsideList.clear();
+			dataList.clear();
+			for(Search_out search_out:searchoutList){
+				dataList.add(search_out.getName());
+//				base64=search_out.getPic();
+//				bytes = Base64.decode(base64, Base64.DEFAULT);
+				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //ÓÃBitmapFactoryÉú³Ébitmap
+				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed()+search_out.getTime());
+				firstinsideList.add(fi1);
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 			}
 		}else{
 			Bitmap bb=null;

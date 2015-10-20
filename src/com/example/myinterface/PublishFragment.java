@@ -1,5 +1,6 @@
 package com.example.myinterface;
 
+<<<<<<< HEAD
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -150,3 +151,23 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
         younidb=Younidb.getInstance(this.getActivity().getApplicationContext());
     }
 }
+=======
+
+import com.example.tab.R;
+import android.support.v4.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup; 
+
+public class PublishFragment extends Fragment {
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.publish, container, false);
+       
+        return view; 
+    }
+}
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
