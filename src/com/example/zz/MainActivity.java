@@ -5,6 +5,10 @@ package com.example.zz;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import java.util.Collection;
 import java.util.List;
 
@@ -12,10 +16,18 @@ import android.widget.AdapterView;
 import model.Search_out;
 
 import com.example.myinterface.DetailFragment;
+<<<<<<< HEAD
+=======
+=======
+import java.util.List;
+
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import com.example.myinterface.DonationFragment;
 import com.example.myinterface.HomeFragment;
 import com.example.myinterface.MeFragment;
 import com.example.myinterface.PublishFragment;
+<<<<<<< HEAD
 import com.example.myinterface.firstinside;
 import com.example.sqlite.Younidb;
 import com.example.zz.ChangeColorIconWithTextView;
@@ -23,6 +35,20 @@ import com.example.zz.ChangeColorIconWithTextView;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+=======
+<<<<<<< HEAD
+import com.example.myinterface.firstinside;
+import com.example.sqlite.Younidb;
+import com.example.zz.ChangeColorIconWithTextView;
+
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Context;
+=======
+import com.example.zz.ChangeColorIconWithTextView;
+
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,7 +56,14 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+<<<<<<< HEAD
 import android.view.LayoutInflater;
+=======
+<<<<<<< HEAD
+import android.view.LayoutInflater;
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,13 +72,25 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener; 
+<<<<<<< HEAD
 import android.widget.ListView;
+=======
+<<<<<<< HEAD
+import android.widget.ListView;
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 
 
 public  class MainActivity extends FragmentActivity implements
 OnPageChangeListener, OnClickListener {
 
 	private ViewPager mViewPager;
+<<<<<<< HEAD
+	private Younidb younidb;
+	private Context context;
+=======
+<<<<<<< HEAD
 	private Younidb younidb;
 	private Context context;
     private FragmentPagerAdapter mAdapter;  
@@ -62,6 +107,26 @@ OnPageChangeListener, OnClickListener {
 	private String to;
 	private ListView listView;
     private android.support.v4.app.FragmentManager fragmentManager;
+=======
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
+    private FragmentPagerAdapter mAdapter;  
+    private List<Fragment> mTabs = new ArrayList<Fragment>();
+    private HomeFragment myFragment1;
+    private PublishFragment myFragment2 = null;
+    private DonationFragment myFragment3 = null;
+    private MeFragment myFragment4 = null;
+<<<<<<< HEAD
+    private Fragment detailFragment;
+    private List<String>dataList=new ArrayList<String>();
+	private List<Search_out> searchoutList;
+	private List<firstinside> firstinsideList=new ArrayList<firstinside>();
+	private firstinside info;
+	private String to;
+	private ListView listView;
+    private android.support.v4.app.FragmentManager fragmentManager;
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 	
 	 public static final int PAGE_ONE = 0;
 	    public static final int PAGE_TWO = 1;
@@ -76,20 +141,47 @@ OnPageChangeListener, OnClickListener {
 		//requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); 
 		setContentView(R.layout.activity_main);
 	    //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);   
+<<<<<<< HEAD
 
 		setOverflowShowingAlways(); 
 		getActionBar().setDisplayShowHomeEnabled(false);
 		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
 	    
+=======
+<<<<<<< HEAD
+
+		setOverflowShowingAlways(); 
+		getActionBar().setDisplayShowHomeEnabled(false);
+		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+	    
+=======
+		
+		setOverflowShowingAlways(); 
+		getActionBar().setDisplayShowHomeEnabled(false);
+		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+	
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 		initDatas();
 		mViewPager.setAdapter(mAdapter);	
 		mViewPager.setOnPageChangeListener(this);
 		
 	}
+<<<<<<< HEAD
 	@Override 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 	}
+=======
+<<<<<<< HEAD
+	@Override 
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);;
+	}
+=======
+	
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 	  private void initDatas()  
 	    {  
 		    myFragment1 = new HomeFragment();

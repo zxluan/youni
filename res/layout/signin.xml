@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<<<<<<< HEAD
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/backdrop" 
+    >
+
+<<<<<<< HEAD
+=======
+</LinearLayout>
+=======
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +22,7 @@
     android:background="@drawable/backdrop" 
     >
 
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -125,3 +142,7 @@
         android:inputType="textPersonName" />
 
 </RelativeLayout >
+<<<<<<< HEAD
+=======
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b

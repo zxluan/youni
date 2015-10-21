@@ -6,7 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+<<<<<<< HEAD
 import com.example.zz.R;
+=======
+import com.example.tab.R;
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 
 
 

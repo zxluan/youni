@@ -2,9 +2,13 @@ package com.example.myinterface;
 
 
 import com.example.sqlite.MyDataDB;
+<<<<<<< HEAD
 
 
 import com.example.zz.R;
+=======
+import com.example.youni.R;
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 
 import model.User;
 import android.app.Activity;

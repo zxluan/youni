@@ -1,5 +1,9 @@
 package com.example.myinterface;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,9 +16,12 @@ import model.Search_out;
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 //import com.example.myinterface.PersonFragment.NewButtonListener;
 import com.example.sqlite.*;
 //import com.example.youni.Firstpanel;
@@ -22,6 +29,7 @@ import com.example.zz.R;
 //import com.example.zz.R.id;
 
 
+<<<<<<< HEAD
 
 
 
@@ -29,6 +37,11 @@ import com.example.zz.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+=======
+
+import android.app.Activity;
+import android.content.Intent;
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -56,29 +69,45 @@ public class PublishFragment extends Fragment {
     private Uri imageUri;
     public static final int TAKE_PHOTO = 1;
     public static final int CROP_PHOTO = 2;
+<<<<<<< HEAD
     private ImageView picture;
     private byte[] base64;
     private String name;
 	private SharedPreferences getname;
 //    private ImageButton chooseFromAlbum;
+=======
+//	private static final int RESULT_OK = 1;
+    private ImageView picture;
+    private byte[] base64;
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     @Override
     
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.publish, container, false);
         Button checkp=(Button)view.findViewById(R.id.button1);
         editText=(EditText)view.findViewById(R.id.editText2);
+<<<<<<< HEAD
 //        chooseFromAlbum = (ImageButton)view.findViewById(R.id.imageButton3);//添加本地图片
+=======
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
         ImageButton photo=(ImageButton)view.findViewById(R.id.imageButton1);
         address=(EditText)view.findViewById(R.id.editText3);
         picture=(ImageView)view.findViewById(R.id.takephoto);
         checkp.setOnClickListener(new NewButtonListener()); 
+<<<<<<< HEAD
 //        chooseFromAlbum.setOnClickListener(new choose());
+=======
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
         photo.setOnClickListener(new photo());
 //        EditText editText=(EditText)view.findViewById(R.id.editText2);
 //        editText.setOnClickListener(new NewEditTextListener()); 
         return view; 
     }
+<<<<<<< HEAD
     //启动相机
+=======
+    
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     class photo implements OnClickListener{
 		@Override
 		public void onClick(View v) {
@@ -97,6 +126,7 @@ public class PublishFragment extends Fragment {
 				startActivityForResult(intent, Activity.DEFAULT_KEYS_DIALER); // 启动相机程序
 				}
 			}
+<<<<<<< HEAD
 ////在
 //class choose implements OnClickListener{
 //	@Override
@@ -125,6 +155,9 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 //	Log.d("PublishFragment","requestCode"+requestCode);
 //	Log.d("PublishFragment","resultCode"+resultCode);
 //	Log.d("PublishFragment","data"+data);
+=======
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 	switch (requestCode) {
 	case TAKE_PHOTO:
 	if (resultCode ==  Activity.RESULT_OK) {
@@ -136,7 +169,11 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	}
 	break;
 	case CROP_PHOTO:
+<<<<<<< HEAD
 		if (resultCode == Activity.RESULT_OK) {
+=======
+		if (resultCode ==  Activity.RESULT_OK) {
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     		try {
     		Bitmap bitmap = BitmapFactory.decodeStream (getActivity().getContentResolver().openInputStream(imageUri));
     		ByteArrayOutputStream bos = new ByteArrayOutputStream();  
@@ -144,7 +181,11 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
     		     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);  
     	         bos.close();  
     	     } catch (IOException e) {  
+<<<<<<< HEAD
     	     e.printStackTrace();
+=======
+    	     e.printStackTrace();  
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     	     }  
     	     base64=bos.toByteArray(); 
     		picture.setImageBitmap(bitmap); // 将裁剪后的照片显示出来
@@ -157,7 +198,13 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		default:
 			break;
 	}
+<<<<<<< HEAD
 } 
+=======
+}
+    
+    
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     class NewButtonListener implements OnClickListener{  
 		   
         @Override  
@@ -167,8 +214,11 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 			// editText的监听在上面  我不知道里面加的是什么内容  可以在这里新建一个EditText的监听  里面加连数据库内容
 			String detailed=editText.getText().toString();
 			String address1=address.getText().toString();
+<<<<<<< HEAD
 			getname=getActivity().getSharedPreferences("user",Activity.MODE_PRIVATE);
 			name=getname.getString("name", "");
+=======
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 			SimpleDateFormat formatter=new SimpleDateFormat("yyyy年MM月dd日HH时mm分", Locale.getDefault()); 
 			Date curDate=new Date(System.currentTimeMillis());//获取当前时间
 			String str=formatter.format(curDate);
@@ -187,4 +237,27 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onCreate(savedInstanceState);
         younidb=Younidb.getInstance(this.getActivity().getApplicationContext());
     }
+<<<<<<< HEAD
+=======
 }
+=======
+
+import com.example.tab.R;
+import android.support.v4.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup; 
+
+public class PublishFragment extends Fragment {
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.publish, container, false);
+       
+        return view; 
+    }
+>>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
+}
+>>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
