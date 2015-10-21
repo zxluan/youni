@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bj"
     android:orientation="vertical"   >
       
        <ImageView
@@ -22,17 +23,9 @@
     <TextView
         android:id="@+id/detailed_show"
         android:layout_width="match_parent"
-        android:layout_height="86dp"
+        android:layout_height="130dp"
         android:ems="10"
-        android:hint="@string/detailed" />
-        
-    <TextView
-        android:id="@+id/time_show"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/time" >
-        
+        android:hint="@string/detailed" >
 
         <requestFocus />
     </TextView>
@@ -40,7 +33,7 @@
 
  <LinearLayout
      android:layout_width="match_parent"
-     android:layout_height="376dp" >
+     android:layout_height="match_parent" >
 
        <ImageButton
            android:id="@+id/imageButton1"
