@@ -5,14 +5,24 @@ package com.example.zz;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
+import android.widget.AdapterView;
+import model.Search_out;
+
+import com.example.myinterface.DetailFragment;
 import com.example.myinterface.DonationFragment;
 import com.example.myinterface.HomeFragment;
 import com.example.myinterface.MeFragment;
 import com.example.myinterface.PublishFragment;
+import com.example.myinterface.firstinside;
+import com.example.sqlite.Younidb;
 import com.example.zz.ChangeColorIconWithTextView;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,6 +30,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,18 +39,29 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener; 
+import android.widget.ListView;
 
 
 public  class MainActivity extends FragmentActivity implements
 OnPageChangeListener, OnClickListener {
 
 	private ViewPager mViewPager;
+	private Younidb younidb;
+	private Context context;
     private FragmentPagerAdapter mAdapter;  
     private List<Fragment> mTabs = new ArrayList<Fragment>();
-    private HomeFragment myFragment1 = null;
+    private HomeFragment myFragment1;
     private PublishFragment myFragment2 = null;
     private DonationFragment myFragment3 = null;
     private MeFragment myFragment4 = null;
+    private Fragment detailFragment;
+    private List<String>dataList=new ArrayList<String>();
+	private List<Search_out> searchoutList;
+	private List<firstinside> firstinsideList=new ArrayList<firstinside>();
+	private firstinside info;
+	private String to;
+	private ListView listView;
+    private android.support.v4.app.FragmentManager fragmentManager;
 	
 	 public static final int PAGE_ONE = 0;
 	    public static final int PAGE_TWO = 1;
@@ -54,17 +76,20 @@ OnPageChangeListener, OnClickListener {
 		//requestWindowFeature(Window.FEATURE_CUSTOM_TITLE); 
 		setContentView(R.layout.activity_main);
 	    //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.title_bar);   
-		
+
 		setOverflowShowingAlways(); 
 		getActionBar().setDisplayShowHomeEnabled(false);
 		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
-	
+	    
 		initDatas();
 		mViewPager.setAdapter(mAdapter);	
 		mViewPager.setOnPageChangeListener(this);
 		
 	}
-	
+	@Override 
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+	}
 	  private void initDatas()  
 	    {  
 		    myFragment1 = new HomeFragment();

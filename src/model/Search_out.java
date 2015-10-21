@@ -10,6 +10,20 @@ public class Search_out implements Serializable{
 	private String like;
 	private String history;
 	private String time;
+	private String address;
+	private byte[] pic;
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public byte[] getPic() {
+		return pic;
+	}
+	public void setPic(byte[] pic) {
+		this.pic = pic;
+	}
 	public int getId() {
 		return id;
 	}

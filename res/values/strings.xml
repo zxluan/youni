@@ -47,6 +47,14 @@
         <string name="find">找回密码</string>
          <string name="donation2">我要捐</string>
           <string name="fast">快速注册</string>
+          <string name="nichen">昵称</string>
+         <string name="setword">请设置密码</string>
+         <string name="phone">请输入手机号</string>
+         <string name="phonen">手机</string>
+         <string name="mail">请输入邮箱</string>
+         <string name="email">邮箱</string>
+          <string name="sig">注册</string>
+            <string name="setaddress">请输入地址</string>
          
         
 
