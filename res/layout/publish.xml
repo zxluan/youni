@@ -5,23 +5,15 @@
     xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@drawable/bj"
-=======
-    android:background="@drawable/bg"
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-<<<<<<< HEAD
     tools:context="com.example.zz.MainActivity" >
-=======
-    tools:context="com.example.youni.MainActivity" >
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/time"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -82,48 +74,12 @@
         android1:layout_toRightOf="@+id/editText4"
         android1:src="@android:drawable/ic_menu_camera" />
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    <TextView
-        android1:id="@+id/tv_user"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:layout_alignLeft="@+id/button1"
-        android1:layout_below="@+id/imageButton1"
-        android1:layout_marginTop="16dp"
-        android1:text="@string/address1"
-        android1:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android1:id="@+id/editText3"
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
-        android1:layout_below="@+id/tv_user"
-        android1:layout_toRightOf="@+id/editText4"
-        android1:ems="10"
-        android1:hint="@string/input_address"
-        android1:inputType="textPostalAddress" />
-
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     <EditText
         android1:id="@+id/editText2"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
-<<<<<<< HEAD
-        android1:layout_alignLeft="@+id/editText1"
+        android1:layout_alignLeft="@+id/time"
         android1:layout_below="@+id/myRadioGroup"
-=======
-<<<<<<< HEAD
-        android1:layout_alignLeft="@+id/editText1"
-        android1:layout_below="@+id/myRadioGroup"
-=======
-        android1:layout_above="@+id/imageButton3"
-        android1:layout_alignLeft="@+id/editText1"
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
         android1:ems="10"
         android1:hint="@string/say_something"
         android1:inputType="textMultiLine" />
@@ -145,10 +101,6 @@
         android1:layout_toRightOf="@+id/editText4"
         android1:text="@string/check1" />
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
     <ImageView
         android1:id="@+id/takephoto"
         android1:layout_width="wrap_content"
@@ -179,9 +131,4 @@
         android1:text="@string/address1"
         android1:textAppearance="?android:attr/textAppearanceLarge" />
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 </RelativeLayout>

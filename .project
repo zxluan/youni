@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>younizz1.0t</name>
-=======
-<<<<<<< HEAD
 	<name>younizz</name>
-=======
-	<name>youni1</name>
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,19 +21,6 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-<<<<<<< HEAD
-=======
-			<name>org.eclipse.wst.common.project.facet.core.builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.wst.validation.validationbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 			<name>com.android.ide.eclipse.adt.ApkBuilder</name>
 			<arguments>
 			</arguments>
@@ -49,12 +28,6 @@
 	</buildSpec>
 	<natures>
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
-<<<<<<< HEAD
-=======
-		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
-		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
-		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>

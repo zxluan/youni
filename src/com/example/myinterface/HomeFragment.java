@@ -1,6 +1,5 @@
 package com.example.myinterface;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,19 +7,13 @@ import java.util.Map;
 
 import model.Search_out;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 
 
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
+
 //import com.example.myinterface.MeFragment.NewButtonListener;
 import com.example.search.searchpanel;
 import com.example.sqlite.Younidb;
@@ -41,6 +34,7 @@ import com.example.zz.first_inside_Adapter;
 
 
 
+
 import android.app.Activity;
 import android.app.ListFragment;
 import android.content.Context;
@@ -51,6 +45,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -82,8 +77,8 @@ public class HomeFragment extends Fragment {
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
             Bundle savedInstanceState) {  
-        View view = inflater.inflate(R.layout.home, container, false);  
-<<<<<<< HEAD
+        View view = inflater.inflate(R.layout.home, container, false); 
+//        younidb.deleteSearch_out();
         Button button1 = (Button) view.findViewById(R.id.search);//search按钮的获取实例
         listView =(ListView) view.findViewById(R.id.detailed_view); //在首页显示的ListView的获取实例
         button1.setOnClickListener(new NewButtonListener()); //search按钮的监听
@@ -93,16 +88,6 @@ public class HomeFragment extends Fragment {
         adapter = new first_inside_Adapter(getActivity(),R.layout.first_inside,firstinsideList); //适配器的绑定
 		listView.setAdapter(adapter); //添加适配器
 		setHasOptionsMenu(true);//展示menu
-=======
-        Button button1 = (Button) view.findViewById(R.id.search);
-        listView =(ListView) view.findViewById(R.id.detailed_view); 
-        button1.setOnClickListener(new NewButtonListener()); 
-        listView.setOnItemClickListener(new ItemClickListener()); 
-        initfirstinsides();
-        adapter = new first_inside_Adapter(getActivity(),R.layout.first_inside,firstinsideList); 
-		listView.setAdapter(adapter); 
-		setHasOptionsMenu(true);
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
         return view;  
 	}
 	//search按钮的监听内容
@@ -120,22 +105,8 @@ public class HomeFragment extends Fragment {
 	  
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-<<<<<<< HEAD
 	}
 	//listview的监听内容
-=======
-		
-//		  List<Map<String, Object>> listItems = new ArrayList<Map<String, Object>>();  
-//	        for (int i = 0; i < values.length; i++) {  
-//	            Map<String, Object> listItem = new HashMap<String, Object>();  
-//	            listItem.put("values", values[i]);  
-//	            listItem.put("images", images[i]);  
-//	            listItems.add(listItem);  
-//	        }  
-		
-//		listView.setOnItemClickListener(new OnItemClickListener()
-	}
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 	class ItemClickListener implements OnItemClickListener{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -155,7 +126,6 @@ public class HomeFragment extends Fragment {
 	        mBundle.putSerializable(SER_KEY,search_out1);  
 	        intent.putExtras(mBundle);
 			getActivity().startActivity(intent); 
-<<<<<<< HEAD
 		}
 	}
 	//获得当前fragment的context
@@ -168,42 +138,27 @@ public class HomeFragment extends Fragment {
 	private void initfirstinsides() {
 		younidb=Younidb.getInstance(this.context);
 		searchoutList=younidb.loadSearch_out();//搜索数据库返回当前信息，存入List中
-=======
-		}
-	}
-	@Override    
-	public void onAttach(Activity activity) {        
-		super.onAttach(activity);        
-		this.context = (MainActivity)activity;    
-		}
-	private void initfirstinsides() {
-		younidb=Younidb.getInstance(this.context);
-		searchoutList=younidb.loadSearch_out();
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
 		// TODO Auto-generated method
 		if(searchoutList.size()>0){
 //			firstinsideList.clear();
 			dataList.clear();
 			for(Search_out search_out:searchoutList){
-				if(search_out.getPic().length >0){
-				dataList.add(search_out.getName());
-				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
-				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed());
-				firstinsideList.add(fi1);
+				if(search_out.getPic().length>0){
+					dataList.add(search_out.getName());
+					Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
+					firstinside fi1=new firstinside(search_out.getName()+search_out.getPic().length,bmp,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
+					firstinsideList.add(fi1);
 				}else{
 					Bitmap bb=null;
-					firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed());
+					firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
 					firstinsideList.add(fi1);
 				}
 			}
 		}
 	}
 
-<<<<<<< HEAD
 	//菜单界面
 public boolean onCreateOptionsMenu(Menu menu) {
-=======
-public boolean onCreateOptionsMenu(Menu menu) {
 	
 	// Inflate the menu; this adds items to the action bar if it is present.
 	getActivity().getMenuInflater().inflate(R.menu.main, menu);
@@ -229,55 +184,6 @@ public boolean onOptionsItemSelected(MenuItem item){
 
 }
 
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b
-	
-	// Inflate the menu; this adds items to the action bar if it is present.
-	getActivity().getMenuInflater().inflate(R.menu.main, menu);
-//	super.onCreateOptionsMenu(menu, inflater);
-	return true;
-//	menu.add(0, 1, 1, "刷新");
-	}
-public boolean onOptionsItemSelected(MenuItem item){
-		switch (item.getItemId()){
-		case R.id.action_settings:
-			firstinsideList.clear();
-	        initfirstinsides();
-	        first_inside_Adapter adapter=new first_inside_Adapter(getActivity(),R.layout.first_inside,firstinsideList);
-//			ListView listView =(ListView)findViewById(R.id.detailed_view);
-			listView.setAdapter(adapter);
-	        break;
-	    default:
-	    	break;
-		}
-		return super.onOptionsItemSelected(item);
-}
-
-
-
-=======
-import com.example.tab.R;
-
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-
-
-public class HomeFragment extends Fragment{
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
-            Bundle savedInstanceState) {  
-        View view = inflater.inflate(R.layout.home, container, false);  
-        return view;  
-    }  
-
-}
-<<<<<<< HEAD
-
 	
 
 
-=======
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
->>>>>>> 064793302faf8e6eda077b63484d3b2cf6ee8a4b

@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
-=======
-    android:id="@+id/id_dontion"
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-<<<<<<< HEAD
     android:background="@drawable/bj"
-=======
-    android:background="@drawable/bg"
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.youni.MainActivity" >
 
@@ -68,11 +60,7 @@
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
         android:layout_marginLeft="14dp"
-<<<<<<< HEAD
         android:layout_toRightOf="@+id/textView3"
-=======
-        android:layout_toRightOf="@+id/textView3" 
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
         android:text="@string/delet" />
 
     <Button

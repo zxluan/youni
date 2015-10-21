@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@drawable/bj"
-=======
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
-    android:orientation="vertical"   >
-      
-       <ImageView
-           android:id="@+id/showpict"
-           android:layout_width="319dp"
-           android:layout_height="244dp"
-           android:contentDescription="@string/app_name"
-           android:src="@drawable/showpic" />
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/showpict"
+        android:layout_width="319dp"
+        android:layout_height="244dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/showpic" />
 
     <TextView
         android:id="@+id/detailed_id"
@@ -24,58 +20,59 @@
         android:hint="@string/ID" />
 
     <TextView
+        android:id="@+id/time_d"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:hint="@string/time" />
+
+    <TextView
+        android:id="@+id/address_d"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_weight="0.40"
+        android:ems="10"
+        android:hint="@string/address" />
+
+    <TextView
         android:id="@+id/detailed_show"
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        android:layout_height="130dp"
+        android:layout_height="0dp"
+        android:layout_weight="2.16"
         android:ems="10"
         android:hint="@string/detailed" >
-=======
-        android:layout_height="86dp"
-        android:ems="10"
-        android:hint="@string/detailed" />
-        
-    <TextView
-        android:id="@+id/time_show"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/time" >
-        
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
 
         <requestFocus />
     </TextView>
-        
 
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="162dp" >
 
-       <ImageButton
-           android:id="@+id/imageButton1"
-           android:layout_width="wrap_content"
-           android:layout_height="52dp"
-           android:layout_weight="0.07"
-           android:background="#00000000"
-           android:contentDescription="@string/app_name"
-           android:src="@drawable/heart" />
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_weight="0.07"
+            android:background="#00000000"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/heart" />
 
-       <ImageButton
-           android:id="@+id/imageButton2"
-           android:layout_width="wrap_content"
-           android:layout_height="54dp"
-           android:layout_weight="0.09"
-           android:background="#00000000"
-           android:contentDescription="@string/app_name"
-           android:src="@drawable/heart" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="0.09"
+            android:background="#00000000"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/heart" />
 
-       <Button
-           android:id="@+id/button1"
-           android:layout_width="0dp"
-           android:layout_height="wrap_content"
-           android:layout_weight="0.74"
-           android:text="@string/check" />
-   </LinearLayout>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.74"
+            android:text="@string/check" />
+    </LinearLayout>
 
 </LinearLayout>

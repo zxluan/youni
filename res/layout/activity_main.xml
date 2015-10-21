@@ -1,10 +1,6 @@
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     xmlns:example="http://schemas.android.com/apk/res/com.example.zz"
-=======
-    xmlns:example="http://schemas.android.com/apk/res/com.example.tab"
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,11 +20,7 @@
         android:background="@drawable/tabbg"
         android:orientation="horizontal" >
 
-<<<<<<< HEAD
      <com.example.zz.ChangeColorIconWithTextView
-=======
-     <com.example.tab.ChangeColorIconWithTextView
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
             android:id="@+id/id_indicator_one"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -38,11 +30,7 @@
             example:text="@string/home"
             example:text_size="12sp" />
 
-<<<<<<< HEAD
        <com.example.zz.ChangeColorIconWithTextView
-=======
-       <com.example.tab.ChangeColorIconWithTextView
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
             android:id="@+id/id_indicator_two"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -52,11 +40,7 @@
             example:text="@string/publish"
             example:text_size="12sp" />
 
-<<<<<<< HEAD
        <com.example.zz.ChangeColorIconWithTextView
-=======
-       <com.example.tab.ChangeColorIconWithTextView
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
             android:id="@+id/id_indicator_three"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -66,11 +50,7 @@
             example:text="@string/donation"
             example:text_size="12sp" />
 
-<<<<<<< HEAD
         <com.example.zz.ChangeColorIconWithTextView
-=======
-        <com.example.tab.ChangeColorIconWithTextView
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
             android:id="@+id/id_indicator_four"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
