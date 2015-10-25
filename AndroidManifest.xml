@@ -18,10 +18,7 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask"
-<<<<<<< HEAD
             android:windowSoftInputMode="adjustPan" 
-=======
->>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
