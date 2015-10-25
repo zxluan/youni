@@ -1,32 +1,24 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zz"
     android:versionCode="1"
     android:versionName="1.0" >
-
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" ></uses-permission>  
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>  
+ <uses-permission android:name="android.permission.RESTART_PACKAGES" ></uses-permission>
+    
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.youni"
-    android:versionCode="1"
-    android:versionName="1.0" >
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-<<<<<<< HEAD
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" 
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,28 +36,7 @@
          <activity android:name="com.example.myinterface.detailed_information"></activity>
          <activity android:name="com.example.search.searchpanel"></activity>
          <activity android:name="com.example.search.search"></activity>
-=======
-         <activity 
-            android:name="com.example.youni.Firstpanel"
-            android:label="youni">
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
-                </intent-filter>
-         </activity>
-         <activity
-            android:name="com.example.youni.detailed_information">
-         </activity>
-         <activity
-             android:name="com.example.myinterface.me">
-             </activity>
-              <activity android:name="com.example.search.searchpanel"></activity>
-               <activity android:name="com.example.search.search"></activity>
-               <activity android:name="com.example.donation.public_panel"></activity>
-               <activity android:name="com.example.donation.juanzi"></activity>
-               <activity android:name="com.example.myinterface.LoginActivity"></activity>
-               <activity android:name="com.example.myinterface.SigninActivity"></activity>
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
+          <activity android:name="com.example.myinterface.SigninActivity"></activity>
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="我的捐赠"
+        android:text="我的发布"
         android:textSize="50px"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

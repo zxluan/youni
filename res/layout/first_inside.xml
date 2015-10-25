@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     android:background="@drawable/bj"
-=======
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
     android:orientation="vertical" >
 
     <ImageView
@@ -20,18 +17,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/ID"
-         />
+        android:hint="@string/ID" />
 
     <TextView
         android:id="@+id/detailed"
         android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:ems="10"
+        android:hint="@string/detailed" />
+    
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/detailed"
-        >
+        android:hint="@string/time" />
+   
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/address" />
 
         <requestFocus />
-    </TextView>
+  
 
 </LinearLayout>

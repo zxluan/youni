@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/bj" 
-    >
-    
-    
-
-</LinearLayout>
-=======
 <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -137,4 +125,3 @@
         android:inputType="textPersonName" />
 
 </RelativeLayout >
->>>>>>> 1e0bdc461a22b6b38b9226a987b90cf5a7b32456
