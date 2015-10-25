@@ -7,9 +7,14 @@
 
     <ImageView
         android:id="@+id/showpict"
+<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.60"
+=======
+        android:layout_width="319dp"
+        android:layout_height="244dp"
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
         android:contentDescription="@string/app_name"
         android:src="@drawable/showpic" />
 
@@ -23,6 +28,7 @@
     <TextView
         android:id="@+id/time_d"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:layout_weight="0.15"
         android:ems="10"
@@ -32,6 +38,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.15"
+=======
+        android:layout_height="37dp"
+        android:ems="10"
+        android:hint="@string/time" />
+
+    <TextView
+        android:id="@+id/address_d"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_weight="0.40"
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
         android:ems="10"
         android:hint="@string/address" />
 
@@ -39,7 +56,11 @@
         android:id="@+id/detailed_show"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:layout_weight="1.17"
+=======
+        android:layout_weight="2.16"
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
         android:ems="10"
         android:hint="@string/detailed" >
 
@@ -48,13 +69,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content" >
+=======
+        android:layout_height="162dp" >
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="wrap_content"
+<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+=======
+            android:layout_height="52dp"
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
             android:layout_weight="0.07"
             android:background="#00000000"
             android:contentDescription="@string/app_name"
@@ -63,8 +92,12 @@
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
+<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+=======
+            android:layout_height="54dp"
+>>>>>>> 1e84b9a9291bff04fac1d9b7b116bec129f34516
             android:layout_weight="0.09"
             android:background="#00000000"
             android:contentDescription="@string/app_name"
