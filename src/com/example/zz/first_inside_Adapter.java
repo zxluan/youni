@@ -25,9 +25,13 @@ public class first_inside_Adapter extends ArrayAdapter<firstinside>{
 		ImageView firstinsideImage=(ImageView)view.findViewById(R.id.show);
 		TextView firstinside1 =(TextView)view.findViewById(R.id.id);
 		TextView firstinside2 =(TextView)view.findViewById(R.id.detailed);
-		firstinsideImage.setImageResource(fi.getShowpic());
+		TextView firstinside3 =(TextView)view.findViewById(R.id.time);
+		TextView firstinside4 =(TextView)view.findViewById(R.id.address);
+		firstinsideImage.setImageBitmap(fi.getShowpic());
 		firstinside1.setText(fi.getId());
 		firstinside2.setText(fi.getDetailed());
+		firstinside3.setText(fi.getTime());
+		firstinside4.setText(fi.getAddress());
 		return view;
 		
 		

@@ -1,8 +1,9 @@
 package com.example.myinterface;
 
-import com.example.myinterface.DonationFragment.NewButtonListener;
+//import com.example.myinterface.DonationFragment.NewButtonListener;
+import com.example.zz.MainActivity;
 import com.example.zz.R;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -23,15 +24,17 @@ public class MyDialogFragment extends DialogFragment
     {  
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);  
         View view = inflater.inflate(R.layout.dialog, container);  
-        Button button1 = (Button) view.findViewById(R.id.ok);
-        button1.setOnClickListener(new NewButtonListener()); 
+//        Button button1 = (Button) view.findViewById(R.id.ok);
+//        button1.setOnClickListener(new NewButtonListener()); 
         return view;  
     }  
   
     
-    class NewButtonListener implements OnClickListener{  
-		 public void onClick(View v) {  
-			
-		 }
-	 }
+//    class NewButtonListener implements OnClickListener{  
+//		 public void onClick(View v) {  
+//			    Intent intent = new Intent();  
+//	            intent.setClass(getActivity(), MainActivity.class);  
+//	            getActivity().startActivity(intent); 
+//		 }
+//	 }
 }  
