@@ -183,7 +183,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 			Date curDate=new Date(System.currentTimeMillis());//获取当前时间
 			String str=formatter.format(curDate);
 			if(name.length()>0){
-				if(base64.length<1048502){
+				if(base64.length<2048502){
 					so.setDetailed(detailed);
 					so.setName(name);
 					so.setTime(str);

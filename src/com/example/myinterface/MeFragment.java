@@ -23,6 +23,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup; 
@@ -44,6 +46,18 @@ public class MeFragment extends Fragment {
 	private Context context;
 	private String name;
     public TextView denglu;
+    public static final int UPDATA_LOGIN=1;
+    private Handler handler=new Handler(){
+    	public void handleMessage(Message msg){
+    		switch(msg.what){
+    		case UPDATA_LOGIN:
+    			denglu.setText("你还没登录...");
+    			break;
+    		default:
+    			break;
+    		}
+    	}
+    };
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.me, container, false); 
@@ -106,8 +120,20 @@ public class MeFragment extends Fragment {
 		        	SharedPreferences.Editor editor1 = settings.edit();
 		        	editor1.remove("name");
 		        	editor1.commit();
-		        	Toast.makeText(getActivity().getApplicationContext(), "请先登录再退出",
+		        	if(name.length()==0){
+		            	Toast.makeText(getActivity().getApplicationContext(), "请先登录再退出",
 							Toast.LENGTH_SHORT).show();
+		            }else{
+		            	new Thread(new Runnable(){
+		            		@Override
+		            		public void run(){
+		            			Message message=new Message ();
+		            			message.what=UPDATA_LOGIN;
+		            			handler.sendMessage(message);
+		            		}
+		            	});
+		            }
+		        	
 		            break;   
 		        }  
 		          

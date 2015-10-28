@@ -32,21 +32,16 @@
     </LinearLayout>
 
 	<ListView
-<<<<<<< HEAD
 	    android:id="@+id/detailed_view"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="fill_vertical"
 	    android:divider="#F0F0F0"
-	    android:dividerHeight="10dp" >
+	    android:dividerHeight="20dp"
+	    android:fadingEdge="none"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
 
-=======
-        android:id="@+id/detailed_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" 
-        android:divider="#F0F0F0"
-        android:dividerHeight="10dp">
->>>>>>> 98fe30c4d18e467c1abee671d2a479eb8f6bb9c3
     </ListView>
     
     

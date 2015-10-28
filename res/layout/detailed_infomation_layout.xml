@@ -8,8 +8,8 @@
     <ImageView
         android:id="@+id/showpict"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.60"
+        android:layout_height="345dp"
+        android:layout_weight="0.82"
         android:contentDescription="@string/app_name"
         android:src="@drawable/showpic" />
 

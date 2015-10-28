@@ -87,6 +87,7 @@ public class HomeFragment extends Fragment {
         button1.setOnClickListener(new NewButtonListener()); //search按钮的监听
         listView.setOnItemClickListener(new ItemClickListener());//首页展示ListView的监听
         firstinsideList.clear();//清楚页面ListView中内容避免重复出现重叠的内容
+
         initfirstinsides();//搜索数据库，将数据库的所有信息添加到首页展示listview中
         adapter = new first_inside_Adapter(getActivity(),R.layout.first_inside,firstinsideList); //适配器的绑定
 		listView.setAdapter(adapter); //添加适配器
@@ -140,6 +141,9 @@ public class HomeFragment extends Fragment {
 	//获得当前数据库的内容
 	private void initfirstinsides() {
 		younidb=Younidb.getInstance(this.context);
+//        younidb.deleteSearch_out("hhhh");
+//        younidb.deleteSearch_out("哈哈哈");
+//        younidb.deleteSearch_out("估计");
 		searchoutList=younidb.loadSearch_out();//搜索数据库返回当前信息，存入List中
 		// TODO Auto-generated method
 		if(searchoutList.size()>0){

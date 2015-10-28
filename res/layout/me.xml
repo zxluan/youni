@@ -29,7 +29,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="23dp"
         android:layout_toLeftOf="@+id/denglu"
-        android:src="@drawable/icon3"
+        android:src="@drawable/logo"
         
          />
 

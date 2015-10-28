@@ -127,11 +127,13 @@ public class Younidb {
 		return list;
 		
 	}
-//	public void deleteSearch_out(){
-//		String sra="DELETE FROM search_out";
+//	public void deleteSearch_out(String colunme){
+//		String sra="DELETE FROM search_out where ";
 //		db.rawQuery(sra, null);
 //	}
 //	
-
+	public void deleteSearch_out(String colunme){
+		db.delete("search_out", "detailed==?", new String[]{colunme});
+	}
 
 }

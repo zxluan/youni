@@ -251,8 +251,9 @@ int drawable me 0x7f020061
 int drawable mm_title_btn_contact_normal 0x7f020062
 int drawable publish 0x7f020063
 int drawable search_bar_icon_normal 0x7f020064
-int drawable showpic 0x7f020065
-int drawable tabbg 0x7f020066
+int drawable set 0x7f020065
+int drawable showpic 0x7f020066
+int drawable tabbg 0x7f020067
 int id Button01 0x7f05005e
 int id Button02 0x7f05005f
 int id Button03 0x7f050060
