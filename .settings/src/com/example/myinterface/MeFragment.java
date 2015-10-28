@@ -30,6 +30,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MeFragment extends Fragment {
 	private Younidb younidb;
@@ -59,10 +60,12 @@ public class MeFragment extends Fragment {
         button3.setOnClickListener(new NewButtonListener()); 
         Button button4 = (Button) view.findViewById(R.id.Button02);//我的捐赠
         button4.setOnClickListener(new NewButtonListener());
+        Button button5 = (Button) view.findViewById(R.id.Button03);//退出登录
+        button5.setOnClickListener(new NewButtonListener());
         return view; 
     }
     public void setname(String s){
-    	if(s==null){
+    	if(s.length()==0){
         	denglu.setText("你还没登录...");
         }else{
         	denglu.setText("你好,"+s);
@@ -95,7 +98,17 @@ public class MeFragment extends Fragment {
 		            intent4.setClass(getActivity(), MyDonation.class);  
 		            getActivity().startActivity(intent4); 
 		            break;   
-		            
+		        case R.id.Button03:  //退出登录
+		        	Intent intent5 = new Intent();  
+		            intent5.setClass(getActivity(), MainActivity.class);  
+		            getActivity().startActivity(intent5); 
+		        	SharedPreferences settings = getActivity().getSharedPreferences("user",Activity.MODE_PRIVATE);
+		        	SharedPreferences.Editor editor1 = settings.edit();
+		        	editor1.remove("name");
+		        	editor1.commit();
+		        	Toast.makeText(getActivity().getApplicationContext(), "请先登录再退出",
+							Toast.LENGTH_SHORT).show();
+		            break;   
 		        }  
 		          
 		   
@@ -107,27 +120,27 @@ public class MeFragment extends Fragment {
 			super.onAttach(activity);        
 			this.context = (MainActivity)activity;    
 			}
-	  private void lode(String lie ,String container){
-		  younidb=Younidb.getInstance(this.context);
-			searchoutList=younidb.loadSearch_out(lie,container);//搜索数据库返回当前信息，存入List中
-			// TODO Auto-generated method
-			if(searchoutList.size()>0){
-//				firstinsideList.clear();
-				dataList.clear();
-				for(Search_out search_out:searchoutList){
-					if(search_out.getPic().length >0){
-					dataList.add(search_out.getName());
-					Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
-					firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed());
-					firstinsideList.add(fi1);
-					}else{
-						Bitmap bb=null;
-						firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed());
-						firstinsideList.add(fi1);
-					}
-				}
-			}
-	  }
+//	  private void lode(String lie ,String container){
+//		  younidb=Younidb.getInstance(this.context);
+//			searchoutList=younidb.loadSearch_out(lie,container);//搜索数据库返回当前信息，存入List中
+//			// TODO Auto-generated method
+//			if(searchoutList.size()>0){
+////				firstinsideList.clear();
+//				dataList.clear();
+//				for(Search_out search_out:searchoutList){
+//					if(search_out.getPic().length >0){
+//					dataList.add(search_out.getName());
+//					Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
+//					firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
+//					firstinsideList.add(fi1);
+//					}else{
+//						Bitmap bb=null;
+//						firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
+//						firstinsideList.add(fi1);
+//					}
+//				}
+//			}
+//	  }
 	
 
 }

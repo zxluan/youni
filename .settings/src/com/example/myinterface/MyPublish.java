@@ -74,7 +74,7 @@ public class MyPublish extends Activity{
 			for(Search_out search_out:searchoutList){
 				dataList.add(search_out.getName());
 				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //”√BitmapFactory…˙≥…bitmap
-				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed()+search_out.getTime());
+				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
 				firstinsideList.add(fi1);
 			}
 		}

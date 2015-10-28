@@ -65,6 +65,11 @@ public class Younidb {
 		return list;
 		
 	}
+	public void changeSearch_out(String history,String name){
+		ContentValues values=new ContentValues();
+		values.put("history", history);
+		db.update("search_out", values, "name=?", new String[]{name});
+	}
 	public void saveSearch_need(Search_need search_need){
 		if(search_need!=null){
 			ContentValues values=new ContentValues();
@@ -122,8 +127,11 @@ public class Younidb {
 		return list;
 		
 	}
-	
-	
+//	public void deleteSearch_out(){
+//		String sra="DELETE FROM search_out";
+//		db.rawQuery(sra, null);
+//	}
+//	
 
 
 }

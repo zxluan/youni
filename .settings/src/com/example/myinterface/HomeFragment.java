@@ -13,6 +13,7 @@ import model.Search_out;
 
 
 
+
 //import com.example.myinterface.MeFragment.NewButtonListener;
 import com.example.search.searchpanel;
 import com.example.sqlite.Younidb;
@@ -33,6 +34,7 @@ import com.example.zz.first_inside_Adapter;
 
 
 
+
 import android.app.Activity;
 import android.app.ListFragment;
 import android.content.Context;
@@ -43,6 +45,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -74,7 +77,8 @@ public class HomeFragment extends Fragment {
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,  
             Bundle savedInstanceState) {  
-        View view = inflater.inflate(R.layout.home, container, false);  
+        View view = inflater.inflate(R.layout.home, container, false); 
+//        younidb.deleteSearch_out();
         Button button1 = (Button) view.findViewById(R.id.search);//search按钮的获取实例
         listView =(ListView) view.findViewById(R.id.detailed_view); //在首页显示的ListView的获取实例
         button1.setOnClickListener(new NewButtonListener()); //search按钮的监听
@@ -139,14 +143,14 @@ public class HomeFragment extends Fragment {
 //			firstinsideList.clear();
 			dataList.clear();
 			for(Search_out search_out:searchoutList){
-				if(search_out.getPic().length >0){
-				dataList.add(search_out.getName());
-				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
-				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed());
-				firstinsideList.add(fi1);
+				if(search_out.getPic().length>0){
+					dataList.add(search_out.getName());
+					Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
+					firstinside fi1=new firstinside(search_out.getName()+search_out.getPic().length,bmp,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
+					firstinsideList.add(fi1);
 				}else{
 					Bitmap bb=null;
-					firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed());
+					firstinside fi1=new firstinside(search_out.getName(),bb,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
 					firstinsideList.add(fi1);
 				}
 			}

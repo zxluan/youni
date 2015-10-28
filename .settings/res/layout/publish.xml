@@ -13,7 +13,7 @@
     tools:context="com.example.zz.MainActivity" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/time"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -78,7 +78,7 @@
         android1:id="@+id/editText2"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
-        android1:layout_alignLeft="@+id/editText1"
+        android1:layout_alignLeft="@+id/time"
         android1:layout_below="@+id/myRadioGroup"
         android1:ems="10"
         android1:hint="@string/say_something"
