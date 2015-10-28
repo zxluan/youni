@@ -56,6 +56,8 @@
           <string name="sig">注册</string>
             <string name="setaddress">请输入地址</string>
           <string name="time">时间</string>
-        
+          <string name="thank">您的捐款已收到，祝您生活愉快！</string>
+           <string name="ok">OK</string>
+          
 
 </resources>

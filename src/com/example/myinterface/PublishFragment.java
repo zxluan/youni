@@ -16,8 +16,11 @@ import model.Search_out;
 
 
 
+
+
 //import com.example.myinterface.PersonFragment.NewButtonListener;
 import com.example.sqlite.*;
+import com.example.zz.MainActivity;
 //import com.example.youni.Firstpanel;
 import com.example.zz.R;
 //import com.example.zz.R.id;
@@ -28,7 +31,10 @@ import com.example.zz.R;
 
 
 
+
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -53,6 +59,7 @@ import android.widget.Toast;
 
 public class PublishFragment extends Fragment {
     private Younidb younidb;
+    private Context context;
     private EditText editText;
     private EditText address;
     private static int i=1;
@@ -196,9 +203,12 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
         }  
           
     } 
-    
+    public void onAttach(Activity activity) {        
+		super.onAttach(activity);        
+		this.context = (MainActivity)activity;    
+		}
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        younidb=Younidb.getInstance(this.getActivity().getApplicationContext());
+        younidb=Younidb.getInstance(this.context);
     }
 }
