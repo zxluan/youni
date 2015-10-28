@@ -72,12 +72,13 @@ public class MyFollow extends Activity{
 				if(searchoutList.size()>0){
 					dataList.clear();
 					for(Search_out search_out:searchoutList){
-						if(!search_out.getHistory().equals("")){
-						    sr=new search_reason();
-						    firstinsideList=sr.search_reson(searchoutList, dataList);
+						if(search_out.getHistory()==null){
+							 ;
 						}else{
-							 Toast.makeText(getApplicationContext(), "无关注",
-										Toast.LENGTH_SHORT).show();
+							dataList.add(search_out.getName());
+			  				Bitmap bmp = BitmapFactory.decodeByteArray(search_out.getPic(), 0, search_out.getPic().length); //用BitmapFactory生成bitmap
+			  				firstinside fi1=new firstinside(search_out.getName(),bmp,search_out.getDetailed(),search_out.getTime(),search_out.getAddress());
+			  				firstinsideList.add(fi1);
 						}
 					}
 				}

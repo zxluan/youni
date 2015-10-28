@@ -14,6 +14,7 @@ import model.Search_out;
 
 
 
+
 //import com.example.myinterface.MeFragment.NewButtonListener;
 import com.example.search.searchpanel;
 import com.example.sqlite.Younidb;
@@ -25,6 +26,7 @@ import com.example.zz.first_inside_Adapter;
 //import com.example.zz.R.drawable;
 //import com.example.zz.R.id;
 //import com.example.zz.R.layout;
+
 
 
 
@@ -55,6 +57,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 //import android.widget.SimpleAdapter;
 
@@ -79,7 +82,7 @@ public class HomeFragment extends Fragment {
             Bundle savedInstanceState) {  
         View view = inflater.inflate(R.layout.home, container, false); 
 //        younidb.deleteSearch_out();
-        Button button1 = (Button) view.findViewById(R.id.search);//search按钮的获取实例
+        ImageButton button1 = (ImageButton) view.findViewById(R.id.search);//search按钮的获取实例
         listView =(ListView) view.findViewById(R.id.detailed_view); //在首页显示的ListView的获取实例
         button1.setOnClickListener(new NewButtonListener()); //search按钮的监听
         listView.setOnItemClickListener(new ItemClickListener());//首页展示ListView的监听

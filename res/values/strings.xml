@@ -8,6 +8,7 @@
     <string name="donation">捐资</string>
     <string name="me">我的</string>
     <string name="action_settings">刷新</string>
+    <string name="description">background image</string>
     
     <string name="search_something">Search somthing</string>
     <string name="search">搜索</string>
@@ -56,6 +57,8 @@
           <string name="sig">注册</string>
             <string name="setaddress">请输入地址</string>
           <string name="time">时间</string>
-        
+          <string name="thank">您的捐款已收到，祝您生活愉快！</string>
+           <string name="ok">OK</string>
+          
 
 </resources>

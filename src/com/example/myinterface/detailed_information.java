@@ -57,7 +57,8 @@ public class detailed_information extends Activity {
 							dataList.add(search_out.getName());
 							d=search_out.getHistory();
 						}
-				  younidb.changeSearch_out(d+de, n);
+						
+				        younidb.changeSearch_out(d+de, n);
 				  Toast.makeText(getApplicationContext(), " ’≤ÿ≥…π¶",
 							Toast.LENGTH_SHORT).show();
 			      }
